@@ -114,9 +114,8 @@ def disperse_charges(init_pointset, nb_iter, tol=1.0e-3):
     K = init_pointset.shape[0]
     vects = optimize.fmin_slsqp(f, init_pointset.reshape(K * 3), 
                                 f_eqcons=equality_constraints,
-#                                bounds=[(-1., 1.)] * K * 3,
                                 fprime=grad_f, iter=nb_iter, acc=tol, 
-                                args=[], iprint=1)
+                                args=[], iprint=0)
     return vects
 
 
