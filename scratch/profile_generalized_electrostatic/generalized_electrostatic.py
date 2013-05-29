@@ -116,7 +116,7 @@ def disperse_charges(init_pointset, nb_iter, tol=1.0e-3):
                                 f_eqcons=equality_constraints,
 #                                bounds=[(-1., 1.)] * K * 3,
                                 fprime=grad_f, iter=nb_iter, acc=tol, 
-                                args=[], iprint=0)
+                                args=[], iprint=1)
     return vects
 
 
